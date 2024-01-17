@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            LocationsSeeder::class,
+            // LocationsSeeder::class,
             UserSeeder::class,
         ]);
         // Article::factory(10)->create();
