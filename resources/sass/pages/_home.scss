@@ -1,0 +1,46 @@
+.page-home {
+    h5 {
+        font-weight: 500;
+        color: #0C0D36;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .store-carousel {
+        .carouselHeight{
+            object-fit: cover;
+            object-position: top;
+            max-height: 420px;
+            min-height: 420px;
+            @include media-breakpoint-down(md) {
+                max-height: 354px;
+                min-height: 354px;
+            }
+            @include media-breakpoint-down(sm) {
+                max-height: 194px;
+                min-height: 194px;
+            }
+        }
+    }
+
+    .store-promo {
+        margin-top: 30px;
+    }
+
+    .store-trend-categories {
+        margin-top: 30px;
+    }
+
+    .store-new-product {
+        margin-top: 10px;
+    }
+
+    .store-testimonies {
+        margin-top: 10px;
+    }
+
+    .store-new-articles {
+        margin-top: 10px;
+    }
+}
