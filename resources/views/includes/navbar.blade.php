@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
     <div class="align-items-center container">
-        <a href="{{ route('home') }}" class="navbar-brand text-success fw-bold w-50">
-            <img src="{{ asset('images/logo.png') }}" class="w-100 p-0 m-0" alt="">
+        <a href="{{ route('home') }}" class="navbar-brand d-inline-block" style="max-width: 50%">
+            <img src="{{ asset('images/logo.png') }}" class="w-100 p-0 m-0" style="max-width: 100%;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>

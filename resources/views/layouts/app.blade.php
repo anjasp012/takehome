@@ -21,6 +21,13 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @stack('prepend-style')
+    <style>
+        @media (max-width: 768px) {
+            .bavbar-brand img {
+                max-width: 50%;
+            }
+        }
+    </style>
     @include('includes.style')
     @stack('addon-style')
 </head>
