@@ -23,7 +23,7 @@
     @stack('prepend-style')
     <style>
         @media (max-width: 768px) {
-            .bavbar-brand img {
+            .navbar-brand img {
                 max-width: 50%;
             }
         }
