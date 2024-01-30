@@ -12,7 +12,11 @@ class ProductVariation extends Model
 
     public function getPhotos()
     {
-        return '/storage/' . $this->photos;
+        if ($this->photos != '') {
+            return '/storage/' . $this->photos;
+        } else {
+            return null;
+        }
     }
 
     public function product()

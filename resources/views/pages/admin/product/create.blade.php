@@ -124,7 +124,8 @@
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
                                                 <label class="form-label d-block mb-0" for="Ukuran">Jumlah Kamar</label>
-                                                <small class="text-muted d-block mb-2">Pilih Jumlah Kamar yang tersedia</small>
+                                                <small class="text-muted d-block mb-2">Pilih Jumlah Kamar yang
+                                                    tersedia</small>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" name="size_s"
                                                         id="s">
@@ -217,7 +218,7 @@
                                                                 class="form-control" placeholder="Pilihan Variasi">
                                                         </div>
                                                         <div class="col-4">
-                                                            <input required type="file" name="variations[0][photos]"
+                                                            <input type="file" name="variations[0][photos]"
                                                                 class="form-control @error('variations[0][photos]') is-invalid @enderror">
                                                             @error('variations[0][photos]')
                                                                 <span class="invalid-feedback" role="alert">
@@ -331,7 +332,7 @@
         function addVariasi() {
             let i = $('.variasiDiv').length;
             $('#variasi').append(
-                `<div class="form-group mb-3 variasiDiv"><div class="row g-3 mb-2"><div class="col-6"><input type="text" name="variations[${i}][name]" class="form-control" placeholder="Nama Variasi"></div><div class="col-6"><input type="text" name="variations[${i}][type]" class="form-control" placeholder="Pilihan Variasi"></div><div class="col-4"><input required type="file" name="variations[${i}][photos]" class="form-control"></div><div class="col-4"><input type="number" name="variations[${i}][price]" class="form-control" placeholder="Harga Variasi"></div><div class="col-4"><input type="number" name="variations[${i}][stok]" class="form-control" placeholder="Stok"></div><hr></div>`
+                `<div class="form-group mb-3 variasiDiv"><div class="row g-3 mb-2"><div class="col-6"><input type="text" name="variations[${i}][name]" class="form-control" placeholder="Nama Variasi"></div><div class="col-6"><input type="text" name="variations[${i}][type]" class="form-control" placeholder="Pilihan Variasi"></div><div class="col-4"><input type="file" name="variations[${i}][photos]" class="form-control"></div><div class="col-4"><input type="number" name="variations[${i}][price]" class="form-control" placeholder="Harga Variasi"></div><div class="col-4"><input type="number" name="variations[${i}][stok]" class="form-control" placeholder="Stok"></div><hr></div>`
             );
         }
     </script>

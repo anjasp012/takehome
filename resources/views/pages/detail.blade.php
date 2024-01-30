@@ -136,6 +136,7 @@
                                                                             for="{{ $variation->id }}">{{ $variation->name }}
                                                                         </label>
                                                                     @endforeach
+
                                                                     @error('variation')
                                                                         <small class="text-danger d-block">silahkan pilih tipe
                                                                             unit!</small>
@@ -325,19 +326,28 @@
                         },
                     @endforeach
                     @foreach ($variations as $v => $variation)
-                        {
-                            id: {{ $v + $galleries->count() + 1 }},
-                            url: "{{ asset($variation->getPhotos()) }}",
-                        },
+                        @if ($variation->getPhotos() != null)
+                            {
+                                id: {{ $v + $galleries->count() + 1 }},
+                                url: "{{ asset($variation->getPhotos()) }}",
+                            },
+                        @else
+                            {
+                                id: {{ $v + $galleries->count() + 1 }},
+                                url: "{{ asset($galleries[0]->getPhotos()) }}",
+                            },
+                        @endif
                     @endforeach
                 ],
             },
             methods: {
                 changeActive(id) {
+                    console.log(id);
                     this.activePhoto = id
                 },
             },
         });
+
 
         $('input[type="radio"][name="variation"]').click(function() {
             var harga = $(this).data('harga');
