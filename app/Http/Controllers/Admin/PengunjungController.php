@@ -17,6 +17,9 @@ class PengunjungController extends Controller
         if (request()->ajax()) {
             $query = Pengunjung::with('produk');
             return DataTables::of($query)
+                ->editColumn('created_at', function ($item) {
+                    return $item->created_at->format('Y-m-d');
+                })
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">

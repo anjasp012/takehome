@@ -26,6 +26,7 @@
                                                 <th>No Hp</th>
                                                 <th>Email</th>
                                                 <th>Produk</th>
+                                                <th>Created date</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -69,6 +70,10 @@
                 {
                     data: 'produk.name',
                     name: 'produk.name'
+                },
+                {
+                    data: 'created_at',
+                    name: 'created_at'
                 },
                 {
                     data: 'action',
