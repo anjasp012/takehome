@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->boolean('favorite')->default(false);
+        Schema::create('pengunjung', function (Blueprint $table) {
+            $table->id();
+            $table->integer('product_id');
+            $table->string('nama');
+            $table->string('email');
+            $table->string('no_hp');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('favorite');
-        });
+        Schema::dropIfExists('pengunjung');
     }
 };

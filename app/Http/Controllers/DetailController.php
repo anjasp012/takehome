@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Pengunjung;
 use App\Models\Product;
 use Auth;
 use Illuminate\Http\Request;
@@ -38,5 +39,22 @@ class DetailController extends Controller
         ];
         Auth::user()->cart()->create($data);
         return redirect()->route('cart');
+    }
+
+    public function pengunjung(Request $request, $id)
+    {
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'no_hp' => 'required',
+        ]);
+        $data = [
+            'product_id' => $id,
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'no_hp' => $request->no_hp,
+        ];
+        Pengunjung::create($data);
+        return back()->with('success', 'Terimakasih telah mengunjungi website kami. Selanjutnya team marketing kami akan mengirimkan pricelist kepada anda');
     }
 }

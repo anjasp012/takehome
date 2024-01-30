@@ -91,9 +91,9 @@
                         class="list-group-item list-group-item-action{{ request()->routeIs('testimony.*') ? ' active' : '' }}">
                         Testimony
                     </a>
-                    <a href="{{ route('transaction.index') }}"
-                        class="list-group-item list-group-item-action{{ request()->routeIs('transaction.*') ? ' active' : '' }}">
-                        Transactions
+                    <a href="{{ route('pengunjung.index') }}"
+                        class="list-group-item list-group-item-action{{ request()->routeIs('pengunjung.*') ? ' active' : '' }}">
+                        Pengunjung
                     </a>
                 </div>
             </div>

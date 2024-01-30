@@ -15,7 +15,7 @@ use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\ProductGalleryController as AdminProductGalleryController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\TestimonyController as AdminTestimonyController;
-use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
+use App\Http\Controllers\Admin\PengunjungController as AdminPengunjungController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CartController;
@@ -52,6 +52,7 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/categories/{id}', [CategoryController::class, 'details'])->name('categories-details');
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('detail');
 Route::post('/details/{id}', [DetailController::class, 'add'])->name('detail-add');
+Route::post('/details/{id}/pengunjung', [DetailController::class, 'pengunjung'])->name('detail-pengunjung');
 Route::get('/tentang-kami', TentangKamiController::class)->name('tentangkami');
 Route::get('/kontak', KontakController::class)->name('kontak');
 Route::get('/visi-misi', MisiVisiController::class)->name('visi-misi');
@@ -101,7 +102,7 @@ Route::prefix('admin')->middleware('auth', 'admin')->group(function () {
             'slider' => AdminSliderController::class,
             'product' => AdminProductController::class,
             'product-gallery' => AdminProductGalleryController::class,
-            'transaction' => AdminTransactionController::class,
+            'pengunjung' => AdminPengunjungController::class,
             'news' => AdminArticleController::class,
             'testimony' => AdminTestimonyController::class,
             'contact' => AdminContactController::class,
