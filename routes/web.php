@@ -89,10 +89,9 @@ Route::get('/register/success', [RegisterController::class, 'success'])->name('r
 
 
 Route::prefix('admin')->middleware('auth', 'admin')->group(function () {
-    Route::get('/users', function () {
-        // Matches The "/admin/users" URL
-    });
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin-dashboard');
+    Route::get('/ubah-password', [AdminDashboardController::class, 'changePassword'])->name('admin-changePassword');
+    Route::put('/ubah-password', [AdminDashboardController::class, 'password'])->name('admin-changePassword');
     Route::resources(
         [
             'header-category' => AdminHeaderCategoryController::class,

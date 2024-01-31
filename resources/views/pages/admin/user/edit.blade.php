@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Category')
+@section('title', 'Edit User')
 
 @section('content')
     <div class="section-content section-dashboard-home" data-aos="fade-up">
         <div class="container-fluid">
             <div class="dashboard-heading">
-                <h2 class="dashboard-title">Category</h2>
+                <h2 class="dashboard-title">User</h2>
                 <p class="dashboard-subtitle">
-                    Edit Category
+                    Edit User
                 </p>
             </div>
             <div class="dashboard-contennt">

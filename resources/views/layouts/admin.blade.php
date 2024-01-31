@@ -121,7 +121,8 @@
                                     </a>
                                     <div class="dropdown-menu">
                                         <a href="" class="dropdown-item">Dashboard</a>
-                                        <a href="" class="dropdown-item">Settings</a>
+                                        <a href="{{ route('admin-changePassword') }}" class="dropdown-item">Ubah
+                                            Password</a>
                                         <div class="dropdown-divider"></div>
                                         <a href="{{ route('logout') }}" class="dropdown-item"
                                             onclick="event.preventDefault();

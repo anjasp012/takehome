@@ -386,6 +386,11 @@
             Swal.fire({
                 text: "{{ session('success') }}",
                 icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to WhatsApp
+                    window.location.href = 'https://api.whatsapp.com/send?phone=6282188892023';
+                }
             });
         </script>
     @endif
