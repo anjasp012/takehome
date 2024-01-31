@@ -388,8 +388,8 @@
                 icon: "success"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // Redirect to WhatsApp
-                    window.location.href = 'https://api.whatsapp.com/send?phone=6282188892023';
+                    // Open WhatsApp link in a new page
+                    window.open('https://api.whatsapp.com/send?phone=6282188892023', '_blank');
                 }
             });
         </script>
