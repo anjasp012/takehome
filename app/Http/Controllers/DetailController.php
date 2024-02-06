@@ -46,12 +46,14 @@ class DetailController extends Controller
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
+            'no_wa' => 'required',
             'no_hp' => 'required',
         ]);
         $data = [
             'product_id' => $id,
             'nama' => $request->nama,
             'email' => $request->email,
+            'no_wa' => $request->no_wa,
             'no_hp' => $request->no_hp,
         ];
         Pengunjung::create($data);

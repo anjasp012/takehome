@@ -294,6 +294,10 @@
                             <input type="text" class="form-control" name="email" id="email" required>
                         </div>
                         <div class="mb-3">
+                            <label for="no_wa" class="form-label">No Wa</label>
+                            <input type="text" class="form-control" name="no_hp" id="no_hp" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="no_hp" class="form-label">No Hp</label>
                             <input type="text" class="form-control" name="no_hp" id="no_hp" required>
                         </div>
